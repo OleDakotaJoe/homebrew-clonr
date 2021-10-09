@@ -10,24 +10,24 @@ class Clonr < Formula
   bottle :unneeded
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/oledakotajoe/clonr/releases/v1.0.0/clonr_1.0.0_Darwin_x86_64.tar.gz"
-      sha256 "5adcc04c9c091322c9cf7cf829c10efee63204ea6c559dd8eaa7d5a7d5b1f0fd"
-    end
     if Hardware::CPU.arm?
-      url "https://github.com/oledakotajoe/clonr/releases/v1.0.0/clonr_1.0.0_Darwin_arm64.tar.gz"
-      sha256 "41312128db7499213a3ae4e95d78e968ade9236ffd7cd4c26944439ac700475b"
+      url "https://github.com/oledakotajoe/clonr/releases/download/v1.0.0/clonr_1.0.0_Darwin_arm64.tar.gz"
+      sha256 "6ed2d4b2f439edc135064bbaf18ceb4734ab2124d3087ab24e7cf0853f5eeb07"
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/oledakotajoe/clonr/releases/download/v1.0.0/clonr_1.0.0_Darwin_x86_64.tar.gz"
+      sha256 "b308032769f1ed54a79958b146b025bd5c7aba0e8a48bfc14df1e7db8f7e9ba4"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/oledakotajoe/clonr/releases/v1.0.0/clonr_1.0.0_Linux_x86_64.tar.gz"
-      sha256 "c4e80d1ff5208558349b41ccdbdb9c1c51fe7d0121a1f69a06ceec575f7e2649"
+      url "https://github.com/oledakotajoe/clonr/releases/download/v1.0.0/clonr_1.0.0_Linux_x86_64.tar.gz"
+      sha256 "9a22568c55950ed4b2074350f0d4e5e824e41daf36ef1028693b64877765fa68"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/oledakotajoe/clonr/releases/v1.0.0/clonr_1.0.0_Linux_arm64.tar.gz"
-      sha256 "545a43982dbc3b27e985e84e9b6027107d9457adb9b4372d2277fb4dc862ac7a"
+      url "https://github.com/oledakotajoe/clonr/releases/download/v1.0.0/clonr_1.0.0_Linux_arm64.tar.gz"
+      sha256 "ec5b35dbc74787a7a835fc3fd7f8a76d61cd32b9a0c118b09f481cf554b03370"
     end
   end
 
