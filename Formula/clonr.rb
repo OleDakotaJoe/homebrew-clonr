@@ -5,29 +5,29 @@
 class Clonr < Formula
   desc "A fast and easy to use templating engine."
   homepage ""
-  version "1.0.1"
+  version "1.0.2"
   license "MIT"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/oledakotajoe/clonr/releases/download/v1.0.1/clonr_1.0.1_Darwin_x86_64.tar.gz"
-      sha256 "a12d52b1c75bf64144733bc65272feba6882804f0c234fdf2296a799a4c8c9ac"
+      url "https://github.com/oledakotajoe/clonr/releases/download/v1.0.2/clonr_1.0.2_Darwin_x86_64.tar.gz"
+      sha256 "295863b362bd0b746d875c6fd43f545a6e1c7399b8b96a87966d473ff7dcae3d"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/oledakotajoe/clonr/releases/download/v1.0.1/clonr_1.0.1_Darwin_arm64.tar.gz"
-      sha256 "231235a92419bf6cf78462b722b3c8881a9ac7955dbe580494cafbd17e96e034"
+      url "https://github.com/oledakotajoe/clonr/releases/download/v1.0.2/clonr_1.0.2_Darwin_arm64.tar.gz"
+      sha256 "5786dd7eb9e3458c76609568a8f2f68bd240868028b561f0ae545cf504dd4d8e"
     end
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/oledakotajoe/clonr/releases/download/v1.0.1/clonr_1.0.1_Linux_arm64.tar.gz"
-      sha256 "3a438b5ccc1aeab788bca56fbec1abbe18af33150d439e8169b6bf64ae9439e4"
-    end
     if Hardware::CPU.intel?
-      url "https://github.com/oledakotajoe/clonr/releases/download/v1.0.1/clonr_1.0.1_Linux_x86_64.tar.gz"
-      sha256 "5a056727ff8136dfad83a5979dd77f952852d3a38ebe42124e70d446947e57fb"
+      url "https://github.com/oledakotajoe/clonr/releases/download/v1.0.2/clonr_1.0.2_Linux_x86_64.tar.gz"
+      sha256 "fd9fed141d594ce19ee380c53c4f1b5228b2ed4cb29d03381e8ce9086515d6a9"
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/oledakotajoe/clonr/releases/download/v1.0.2/clonr_1.0.2_Linux_arm64.tar.gz"
+      sha256 "f3d6346bb4f9848b4990297923b4b4794dcb23841024f8da13fd31740c02e64a"
     end
   end
 
