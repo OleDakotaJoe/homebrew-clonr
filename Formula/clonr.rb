@@ -5,33 +5,33 @@
 class Clonr < Formula
   desc "A fast and easy to use templating engine."
   homepage ""
-  version "1.0.8"
+  version "1.0.9"
   license "MIT"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/oledakotajoe/clonr/releases/download/v1.0.8/clonr_1.0.8_darwin_amd64.tar.gz"
-      sha256 "b24334afffd066efc0c9722707dea931a0072311167c52771a8f9f075f5501e2"
+      url "https://github.com/oledakotajoe/clonr/releases/download/v1.0.9/clonr_1.0.9_darwin_amd64.tar.gz"
+      sha256 "0b57335e11277d43dc169b434446638fbf28481b171e1d45b2861eab5d0666c8"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/oledakotajoe/clonr/releases/download/v1.0.8/clonr_1.0.8_darwin_arm64.tar.gz"
-      sha256 "f08b174202ddc4065dc8cbddf509460bd70159fb3ba9355b0f78a63680966dae"
+      url "https://github.com/oledakotajoe/clonr/releases/download/v1.0.9/clonr_1.0.9_darwin_arm64.tar.gz"
+      sha256 "eacd29b14320516744e793153b2cb050f847b751f559f95b82a24c19208aecb6"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/oledakotajoe/clonr/releases/download/v1.0.8/clonr_1.0.8_linux_armv6.tar.gz"
-      sha256 "597b584a961609def3d767087eebe902315fb90c6ac7e8b24320715ad686d45b"
-    end
-    if Hardware::CPU.intel?
-      url "https://github.com/oledakotajoe/clonr/releases/download/v1.0.8/clonr_1.0.8_linux_amd64.tar.gz"
-      sha256 "3dfdb1e1947221607df55788ec96ae28037981e461ea31babd5f48e5b2a89eb6"
+      url "https://github.com/oledakotajoe/clonr/releases/download/v1.0.9/clonr_1.0.9_linux_armv6.tar.gz"
+      sha256 "7952447275b20b568eddd36a2936dd05c591497457e2c216e04733a905136bee"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/oledakotajoe/clonr/releases/download/v1.0.8/clonr_1.0.8_linux_arm64.tar.gz"
-      sha256 "30288ffe64a233964f68df9d29374b02e286842ca01912fecac3f1554cc0e31a"
+      url "https://github.com/oledakotajoe/clonr/releases/download/v1.0.9/clonr_1.0.9_linux_arm64.tar.gz"
+      sha256 "3349c02b974b93e17b8a0fcf8ca48ec0a3fa5bef2f3fabcd4ad6fe5263fd343f"
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/oledakotajoe/clonr/releases/download/v1.0.9/clonr_1.0.9_linux_amd64.tar.gz"
+      sha256 "69ab23081a7d22780262ebefaa2085a22519c2594696773c2fbf788d1a0f7ec3"
     end
   end
 
