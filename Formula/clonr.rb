@@ -5,33 +5,33 @@
 class Clonr < Formula
   desc "A fast and easy to use templating engine."
   homepage ""
-  version "1.0.13"
+  version "1.0.14"
   license "MIT"
   bottle :unneeded
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/oledakotajoe/clonr/releases/download/v1.0.13/clonr_1.0.13_darwin_amd64.tar.gz"
-      sha256 "8748a188b8e3ecf12c2c3766b530ba211aeaebc61a89d58ab3086a74e221a043"
-    end
     if Hardware::CPU.arm?
-      url "https://github.com/oledakotajoe/clonr/releases/download/v1.0.13/clonr_1.0.13_darwin_arm64.tar.gz"
-      sha256 "275640a26ff432be0f4809729fd3fb6a66e9f9cf1a15d3ca4fd8fa74bc75f3df"
+      url "https://github.com/oledakotajoe/clonr/releases/download/v1.0.14/clonr_1.0.14_darwin_arm64.tar.gz"
+      sha256 "565af743b5a5ac5c5a007f05207a4130567d5334e44a2ea768fb354cb2bb137f"
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/oledakotajoe/clonr/releases/download/v1.0.14/clonr_1.0.14_darwin_amd64.tar.gz"
+      sha256 "2dbeee3192f9dd405024f682f152ddc1114affe3f7f1d6fe4437fc34b181183a"
     end
   end
 
   on_linux do
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/oledakotajoe/clonr/releases/download/v1.0.13/clonr_1.0.13_linux_armv6.tar.gz"
-      sha256 "2f5112cd6695f529c5e9aed1a958607616dc485765ec6509a3e33272c2a1654d"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/oledakotajoe/clonr/releases/download/v1.0.14/clonr_1.0.14_linux_arm64.tar.gz"
+      sha256 "56dbeb9c7f68a58cb6c898f0a8119eeb453e7e8ddb82b36661209a977a656aa2"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/oledakotajoe/clonr/releases/download/v1.0.13/clonr_1.0.13_linux_amd64.tar.gz"
-      sha256 "dc19bfaff3418ae481474414d01a80b83ca741892dd23287abfcea03019ca837"
+      url "https://github.com/oledakotajoe/clonr/releases/download/v1.0.14/clonr_1.0.14_linux_amd64.tar.gz"
+      sha256 "fcda59fb0f09b0352c6e3c397e70fdf085c70319f59aeff1df1cd2dd51c7b980"
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/oledakotajoe/clonr/releases/download/v1.0.13/clonr_1.0.13_linux_arm64.tar.gz"
-      sha256 "d52e7b7b4d47c47323005b2182db207fb98824f63506e775d58a776c12a15411"
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/oledakotajoe/clonr/releases/download/v1.0.14/clonr_1.0.14_linux_armv6.tar.gz"
+      sha256 "28ff605e108ff99cb742b064f60ab02794011f0738a11fe848b36672a5299472"
     end
   end
 
