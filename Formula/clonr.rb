@@ -5,33 +5,33 @@
 class Clonr < Formula
   desc "A fast and easy to use templating engine."
   homepage ""
-  version "1.0.14"
+  version "1.0.15"
   license "MIT"
   bottle :unneeded
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/oledakotajoe/clonr/releases/download/v1.0.14/clonr_1.0.14_darwin_arm64.tar.gz"
-      sha256 "565af743b5a5ac5c5a007f05207a4130567d5334e44a2ea768fb354cb2bb137f"
-    end
     if Hardware::CPU.intel?
-      url "https://github.com/oledakotajoe/clonr/releases/download/v1.0.14/clonr_1.0.14_darwin_amd64.tar.gz"
-      sha256 "2dbeee3192f9dd405024f682f152ddc1114affe3f7f1d6fe4437fc34b181183a"
+      url "https://github.com/oledakotajoe/clonr/releases/download/v1.0.15/clonr_1.0.15_darwin_amd64.tar.gz"
+      sha256 "fb7f471e4d63c06babd2419881382ad182dd0e158d5a3623c3d43363a8f4f871"
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/oledakotajoe/clonr/releases/download/v1.0.15/clonr_1.0.15_darwin_arm64.tar.gz"
+      sha256 "d16b2c863cd14b4c88423c52c1bfadac63b8df269c6eb372e31510525dd99b54"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/oledakotajoe/clonr/releases/download/v1.0.14/clonr_1.0.14_linux_arm64.tar.gz"
-      sha256 "56dbeb9c7f68a58cb6c898f0a8119eeb453e7e8ddb82b36661209a977a656aa2"
+      url "https://github.com/oledakotajoe/clonr/releases/download/v1.0.15/clonr_1.0.15_linux_arm64.tar.gz"
+      sha256 "b389884843e71d25ab62e8974b21198f76c2890195a20a86ab89f82bc64e7f5d"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/oledakotajoe/clonr/releases/download/v1.0.14/clonr_1.0.14_linux_amd64.tar.gz"
-      sha256 "fcda59fb0f09b0352c6e3c397e70fdf085c70319f59aeff1df1cd2dd51c7b980"
+      url "https://github.com/oledakotajoe/clonr/releases/download/v1.0.15/clonr_1.0.15_linux_amd64.tar.gz"
+      sha256 "57690e19cb77b66f255b500a25225803793d44197e264995da1bdc884a6c5eaa"
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/oledakotajoe/clonr/releases/download/v1.0.14/clonr_1.0.14_linux_armv6.tar.gz"
-      sha256 "28ff605e108ff99cb742b064f60ab02794011f0738a11fe848b36672a5299472"
+      url "https://github.com/oledakotajoe/clonr/releases/download/v1.0.15/clonr_1.0.15_linux_armv6.tar.gz"
+      sha256 "770d6ea0d62b90b6b5520c519f6edcb88caef477d7dbd0d9eb7d7468d82ef541"
     end
   end
 
