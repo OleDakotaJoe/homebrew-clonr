@@ -5,21 +5,21 @@
 class Clonr < Formula
   desc "A fast and easy to use templating engine."
   homepage ""
-  version "1.1.6"
+  version "1.1.7"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/oledakotajoe/clonr/releases/download/v1.1.6/clonr_1.1.6_darwin_amd64.tar.gz"
-      sha256 "ba87044b546e46068a091c4ae714c8f114b6e06eeea82eb280dcebcf8cd331a6"
+      url "https://github.com/oledakotajoe/clonr/releases/download/v1.1.7/clonr_1.1.7_darwin_amd64.tar.gz"
+      sha256 "d0da0e0c2021440f394a3207424e6e7153e3b234a3128bd28a78f0eae5761b95"
 
       def install
         bin.install "clonr"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/oledakotajoe/clonr/releases/download/v1.1.6/clonr_1.1.6_darwin_arm64.tar.gz"
-      sha256 "1571a82cae965a4104755f2e1ce14c6ff1ae698db287126be630dbb6a73ded66"
+      url "https://github.com/oledakotajoe/clonr/releases/download/v1.1.7/clonr_1.1.7_darwin_arm64.tar.gz"
+      sha256 "e0a98a335d3f2aef920bc384e515657e00316b008ff0fe788f1eddb1ad304016"
 
       def install
         bin.install "clonr"
@@ -28,25 +28,25 @@ class Clonr < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/oledakotajoe/clonr/releases/download/v1.1.6/clonr_1.1.6_linux_armv6.tar.gz"
-      sha256 "9357a9c033d7d089b187b0888d008fd38c3872128ae3e74b36131384db3a4ac7"
+    if Hardware::CPU.intel?
+      url "https://github.com/oledakotajoe/clonr/releases/download/v1.1.7/clonr_1.1.7_linux_amd64.tar.gz"
+      sha256 "08a403c690f02f4d907086a360301a6bafb755ecc834d22db0dc6f8f84c33b18"
 
       def install
         bin.install "clonr"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/oledakotajoe/clonr/releases/download/v1.1.6/clonr_1.1.6_linux_arm64.tar.gz"
-      sha256 "a522307fb3bf9ba5258b61c8384320e986e7cd0b8fbf64cd7cd0c703625d11d8"
+      url "https://github.com/oledakotajoe/clonr/releases/download/v1.1.7/clonr_1.1.7_linux_arm64.tar.gz"
+      sha256 "03e27a70a3e83ef3eb97326dfec08f698f1f27f957a14783a56af54680668cb1"
 
       def install
         bin.install "clonr"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/oledakotajoe/clonr/releases/download/v1.1.6/clonr_1.1.6_linux_amd64.tar.gz"
-      sha256 "0e3c1e2b6914c3bb10218048febfeb28228a6f02c481803ace26bcdf86a0aa52"
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/oledakotajoe/clonr/releases/download/v1.1.7/clonr_1.1.7_linux_armv6.tar.gz"
+      sha256 "f235388909cd9d98a1076834acc732652036480deb0ea28f4c7c264d074bb75f"
 
       def install
         bin.install "clonr"
